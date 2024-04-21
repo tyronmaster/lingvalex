@@ -58,18 +58,28 @@ section {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  list-style: -1%;
+  letter-spacing: -0.16px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.button:hover {
+  background: var(--color-grey-dark);
+  transition: 0.5s ease-in-out;
 }
 
 a {
   text-decoration: none;
   display: block;
   color: var(--color-grey-dark);
+  border-bottom: 2px solid var(--color-white);
+
   transition: 0.5s ease-in-out;
 }
 
 a:hover {
   color: var(--color-grey-light);
+  border-bottom: 2px solid var(--color-grey-light);
   transition: 0.5s ease-in-out;
 }
 
@@ -101,7 +111,7 @@ h6 {
 }
 
 body {
-  font-family: "Manrope", sans-serif;
+  font-family: "Inter", sans-serif;
   color: var(--color-black-op80);
   font-size: 18px;
   font-weight: 400;
@@ -160,6 +170,10 @@ textarea::-webkit-input-placeholder {
   padding: 0 var(--full-screen-extra-padding);
 }
 
+.header__logo {
+  cursor: pointer;
+}
+
 .header__menu {
   padding-left: 4rem;
 }
@@ -193,6 +207,12 @@ textarea::-webkit-input-placeholder {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  cursor: pointer;
+}
+
+.header__auth:hover .auth__name {
+  color: var(--color-black);
+  transition: 0.5s ease-in-out;
 }
 
 .auth__name {
@@ -204,6 +224,7 @@ textarea::-webkit-input-placeholder {
   color: var(--color-grey-light);
 
   padding-left: 0.25rem;
+  transition: 0.5s ease-in-out;
 }
 
 .auth__icon {
@@ -226,7 +247,7 @@ textarea::-webkit-input-placeholder {
   padding-bottom: 5rem;
 }
 
-.mainframe__inner {
+.section__inner {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -238,7 +259,8 @@ textarea::-webkit-input-placeholder {
   margin-bottom: 1.5rem;
 }
 
-.mainframe__content {
+.mainframe__text {
+  font-family: "Manrope", sans-serif;
   max-width: 670px;
   text-align: center;
   margin-bottom: 2.5rem;
@@ -249,4 +271,67 @@ textarea::-webkit-input-placeholder {
   padding: 1.25rem 1.5rem;
   max-width: 366px;
   width: 100%;
+}
+/* mainframe ends <<<< */
+
+/* SOLUTION SECTION starts >>>>>*/
+.solution {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.section__title {
+  font-size: 60px;
+  list-style: -3.5px;
+  margin-bottom: 1.5rem;
+}
+
+.section__text {
+  max-width: 670px;
+  text-align: center;
+  margin-bottom: 4.375rem;
+}
+
+.solution__cards {
+  gap: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card__item {
+  border: 2px solid var(--color-stroke-gray);
+  border-radius: 2rem;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  max-width: 400px;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card__item:hover {
+  transform: scale(1.03);
+  transition: transform 0.5s ease-in-out;
+}
+
+.card__title {
+  font-size: 34px;
+  margin-bottom: 0.75rem;
+  letter-spacing: -1.5px;
+}
+
+.card__text {
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.card__icon {
+  width: 368px;
+  height: 245px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
